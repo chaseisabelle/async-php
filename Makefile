@@ -13,8 +13,11 @@ rm:
 ps:
 	docker-compose ps
 
+do:
+	make up && make ps && make curl
+
 redo:
-	make stop && make rm && make up && make ps && make curl
+	make stop && make rm && make do
 
 curl:
 	curl 127.0.0.1:8080
