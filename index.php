@@ -25,7 +25,7 @@ if ($job) {
 // create multiple curl resources
 $curls = [];
 
-foreach (range(1, 10) as $job) {
+foreach (range(1, 3) as $job) {
     // set curl to hit our self
     $curl = curl_init('http://host.docker.internal:8080?job=' . $job);
 
